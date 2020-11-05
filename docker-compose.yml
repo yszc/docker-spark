@@ -66,7 +66,7 @@ services:
       - ./hadoop.env
   
   master:
-    image: gettyimages/spark:2.3.0-hadoop-2.8
+    build: ./spark
     container_name: master
     command: bin/spark-class org.apache.spark.deploy.master.Master -h master
     hostname: master
